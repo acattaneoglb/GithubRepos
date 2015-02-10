@@ -7,19 +7,26 @@
     android:orientation="vertical"
     tools:context=".GithubReposActivity$PlaceholderFragment">
 
-    <EditText android:id="@+id/edit_text_username"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_text_username_hint"/>
+        android:layout_height="wrap_content">
 
-    <TextView android:id="@+id/text_view_repos"
+        <EditText android:id="@+id/edit_text_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_text_username_hint"
+            android:layout_weight="1" />
+
+        <Button android:id="@+id/button_get_repos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_get_repos"/>
+    </LinearLayout>
+
+    <ListView android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-
-    <Button android:id="@+id/button_get_repos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_get_repos"/>
 
 </LinearLayout>
